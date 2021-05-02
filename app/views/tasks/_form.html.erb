@@ -3,8 +3,8 @@
         <div id="error_explanation">
             
             <ul>
-                <% message.errors.full_message.each do |msg| %>
-                    <li><%= msg %></li>
+                <% task.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
                 <% end %>
             </ul>
         </div>
