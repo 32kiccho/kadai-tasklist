@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
-    
+    before_action :require_user_logged_in, only: [:index, :show]
+
+
     include SessionsHelper
     
     private
@@ -13,4 +15,7 @@ class ApplicationController < ActionController::Base
     def counts(user)
         @count_tasks = user.tasks.count
     end
+    
+    
+    
 end
